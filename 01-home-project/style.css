@@ -120,3 +120,30 @@ img {
   margin-bottom:2rem;
 
 }
+
+@media(max-width: 1000px) {
+  .character {
+    padding:2rem 0;
+  }
+}
+
+@media(max-width: 750px) {
+  .hero {
+
+    background-position:  center;
+  }
+  .character {
+    flex-direction: column;
+    
+  }
+  .character__container {
+    margin-bottom:1rem;
+  }
+  .card__container {
+    width:400px;
+    flex-direction: column;
+  }
+  .card__img {
+    margin-top:1rem;
+  }
+}
