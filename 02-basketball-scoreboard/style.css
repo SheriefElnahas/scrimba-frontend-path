@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+
+@font-face {
+  font-family: "Cursed Timer ULiL";
+  src: url(CursedTimerULiL.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #333;
+  color: #fff;
+}
+
+.container {
+  background-color: #102a4b;
+
+  height: 300px;
+  padding: 2rem;
+
+  max-width: 435px;
+  margin: 5rem auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.player-one,
+player-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-one-name,
+.player-two-name {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+  text-transform: uppercase;
+  color: #fffbeb;
+  margin-bottom: 0;
+}
+
+.player-one-score,
+.player-two-score {
+  font-family: "Cursed Timer ULiL";
+  font-size: 70px;
+  color: #f94f6d;
+  margin-left: 0px;
+  text-align: center;
+  background: #080001;
+  margin-right: 5px;
+}
+
+.score-container {
+  width: 155px;
+  height: 110px;
+  background: #080001;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+}
+.btn-increment {
+  background: transparent;
+  border: 2px solid #9aabd8;
+  color: #9aabd8;
+  padding: 7px 5px;
+  font-size: 18px;
+  font-family: "Cursed Timer ULiL";
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.btn-increment:hover {
+  background: rgb(235, 231, 224);
+  cursor: pointer;
+  color: #000;
+}
+.btn-increment:last-of-type {
+  margin-right: 0;
+}
