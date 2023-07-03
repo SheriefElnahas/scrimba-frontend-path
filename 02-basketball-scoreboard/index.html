@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Scrimba Frontend Career Path Project 2 : Basketball Scoreboard" />
     <link rel="stylesheet" href="style.css" />
 
     <!-- Favicon -->
@@ -18,32 +19,37 @@
   </head>
   <body>
     <main>
-      <div class="container">
-        <div class="player-one">
-          <p class="player-one-name">Eren</p>
-          <div class="score-container">
-            <p class="player-one-score"></p>
-          </div>
+      <section>
+        <div class="card">
+          <h1 class="card__heading">Basketball Scoreboard</h1>
+          <div class="flex-container">
+            <div class="player-one">
+              <p class="player-one-name">Eren</p>
+              <div class="score-container">
+                <p class="player-one-score"></p>
+              </div>
 
-          <div class="buttons-container">
-            <button class="btn-increment">+1</button>
-            <button class="btn-increment">+2</button>
-            <button class="btn-increment">+3</button>
+              <div class="buttons-container">
+                <button class="btn-increment">+1</button>
+                <button class="btn-increment">+2</button>
+                <button class="btn-increment">+3</button>
+              </div>
+            </div>
+            <div class="player-two">
+              <p class="player-two-name">Zeke</p>
+              <div class="score-container">
+                <p class="player-two-score"></p>
+              </div>
+
+              <div class="buttons-container">
+                <button class="btn-increment">+1</button>
+                <button class="btn-increment">+2</button>
+                <button class="btn-increment">+3</button>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="player-two">
-          <p class="player-two-name">Zeke</p>
-          <div class="score-container">
-            <p class="player-two-score"></p>
-          </div>
-
-          <div class="buttons-container">
-            <button class="btn-increment">+1</button>
-            <button class="btn-increment">+2</button>
-            <button class="btn-increment">+3</button>
-          </div>
-        </div>
-      </div>
+      </section>
     </main>
 
     <script src="app.js"></script>
