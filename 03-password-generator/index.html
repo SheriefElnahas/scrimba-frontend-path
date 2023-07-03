@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="container">
+        <h1 class="card-heading">Generate a <span class="highlight">random password</span></h1>
+        <p class="card-paragraph">Never use an insecure password again.</p>
+
+        <button class="card-button">Generate Password</button>
+        <input class="password-range" type="number" />
+
+        <div class="checkbox-container">
+          <div class="checkbox">
+            <input class="card-checkbox" type="checkbox" id="letters" value="letters-element" />
+            <label for="letters">Letters</label>
+          </div>
+          <div class="checkbox">
+            <input class="card-checkbox" type="checkbox" id="symbols" value="symbols-element" />
+            <label for="symbols">Symbols</label>
+          </div>
+          <div class="checkbox">
+            <input class="card-checkbox" type="checkbox" id="numbers" value="numbers-element" />
+            <label for="numbers">Numbers</label>
+          </div>
+        </div>
+
+        <div class="input-container">
+          <input class="card-input" type="text" />
+          <input class="card-input" type="text" />
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

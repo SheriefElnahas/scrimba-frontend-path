@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Karla:wght@800&display=swap');
+
+/* font-family: 'Inter', sans-serif;
+font-family: 'Karla', sans-serif; */
+
+body {
+  background: #333;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+.card {
+  max-width: 520px;
+  height: 550px;
+  background: #1f2937;
+  margin: 3rem auto;
+}
+
+.container {
+  padding: 50px 40px;
+  width: 420px;
+}
+
+.card-heading {
+  font-family: 'Karla', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  letter-spacing: -1px;
+}
+.highlight {
+  display: block;
+  color: #4adf86;
+}
+
+.card-paragraph {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #d5d4d8;
+}
+
+.card-button {
+  color: #fff;
+  font-size: 16px;
+  padding: 9px 15px;
+  background: #10b981;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  transition: 0.2s;
+
+  font-family: inherit;
+}
+.card-button:hover {
+  cursor: pointer;
+  background: #14996d;
+}
+
+.checkbox-container {
+  margin: 30px 0;
+}
+
+.checkbox label {
+  font-size: 18px;
+  margin-left: 10px;
+  font-family: 'Inter', sans-serif;
+}
+
+.card-checkbox {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.input-container {
+  border-top: 1px solid #2f3e53;
+  padding-top: 35px;
+  display: flex;
+}
+
+.input-container input:nth-child(1) {
+  margin-right: 20px;
+}
+input[type='text'],
+input[type='number'] {
+  background: #273549;
+  border-radius: 6px;
+  border: none;
+  color: orange;
+
+  font-size: 16px;
+  font-family: inherit;
+  width: 50%;
+  height: 32px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+input[type='number'] {
+  width: 182px;
+  height: 41px;
+  margin-left: 15px;
+}
