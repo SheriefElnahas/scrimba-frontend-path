@@ -3,40 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Generate strong passwords quickly and easily with our password generator application. Protect your accounts with a secure password generator that meets your specific password requirements." />
     <link rel="stylesheet" href="style.css" />
     <title>Password Generator</title>
   </head>
   <body>
-    <div class="card">
-      <div class="container">
-        <h1 class="card-heading">Generate a <span class="highlight">random password</span></h1>
-        <p class="card-paragraph">Never use an insecure password again.</p>
+    <main>
+      <div class="card">
+        <div class="container">
+          <h1 class="card-heading">Generate a <span class="highlight">random password</span></h1>
+          <p class="card-paragraph">Never use an insecure password again.</p>
 
-        <button class="card-button">Generate Password</button>
-        <input class="password-range" type="number" />
-        <p class="alert__text">Please Select Any Field!</p>
+          <button class="card-button">Generate Password</button>
+          <input class="password-range" type="number" />
+          <p class="alert__text">Please Select Any Field!</p>
 
-        <div class="checkbox-container">
-          <div class="checkbox">
-            <input class="card-checkbox" type="checkbox" id="letters" value="letters-element" />
-            <label for="letters">Letters</label>
+          <div class="checkbox-container">
+            <div class="checkbox">
+              <input class="card-checkbox" type="checkbox" id="letters" value="letters-element" />
+              <label for="letters">Letters</label>
+            </div>
+            <div class="checkbox">
+              <input class="card-checkbox" type="checkbox" id="symbols" value="symbols-element" />
+              <label for="symbols">Symbols</label>
+            </div>
+            <div class="checkbox">
+              <input class="card-checkbox" type="checkbox" id="numbers" value="numbers-element" />
+              <label for="numbers">Numbers</label>
+            </div>
           </div>
-          <div class="checkbox">
-            <input class="card-checkbox" type="checkbox" id="symbols" value="symbols-element" />
-            <label for="symbols">Symbols</label>
-          </div>
-          <div class="checkbox">
-            <input class="card-checkbox" type="checkbox" id="numbers" value="numbers-element" />
-            <label for="numbers">Numbers</label>
-          </div>
-        </div>
 
-        <div class="input-container">
-          <input class="card-input" type="text" readonly />
-          <input class="card-input" type="text" readonly />
+          <div class="input-container">
+            <div>
+              <label for="generator-password-1">Generated Password 1</label>
+              <input id="generator-password-1" class="card-input" type="text" readonly />
+            </div>
+            <div>
+              <label for="generator-password-2">Generated Password 2</label>
+              <input id="generator-password-2" class="card-input" type="text" readonly />
+            </div>
+ 
+          </div>
         </div>
       </div>
-    </div>
+    </main>
 
     <script src="app.js"></script>
   </body>

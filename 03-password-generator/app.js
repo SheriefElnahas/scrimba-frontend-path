@@ -2,8 +2,8 @@
 // Select Password Range Element & Generate Buttons & The Password Input
 const numberInput = document.querySelector('input[type="number"]');
 const btn = document.querySelector('button');
-const firstPasswordInput = document.querySelector('.input-container input:nth-child(1)');
-const secondPasswrodInput = document.querySelector('.input-container input:nth-child(2)');
+const firstPasswordInput = document.querySelector('#generator-password-1');
+const secondPasswrodInput = document.querySelector('#generator-password-2');
 
 // Select checkbox elements
 let lettersEl = document.querySelector('input[value="letters-element"]');

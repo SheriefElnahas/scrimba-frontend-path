@@ -13,16 +13,16 @@ body {
   overflow-y: hidden;
 }
 input {
-  color:#4adf86;
+  color: #4adf86;
 }
 .alert__text {
-  background:#c38080;
+  background: #c38080;
   font-weight: bold;
   text-align: center;
-  width:390px;
+  width: 390px;
   border-radius: 6px;
-  padding:0.3rem;
-  font-size:0.9rem;
+  padding: 0.3rem;
+  font-size: 0.9rem;
   letter-spacing: 1px;
   visibility: hidden;
 }
@@ -58,7 +58,7 @@ input {
 }
 
 .card-button {
-  color: #fff;
+  color: #333;
   font-size: 16px;
   padding: 9px 15px;
   background: hsl(160, 84%, 39%);
@@ -99,16 +99,25 @@ input {
 .input-container input:nth-child(1) {
   margin-right: 20px;
 }
+.input-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input-container  div label {
+  margin-bottom:0.5rem;
+  font-weight: bold;
+}
+
 input[type='text'],
 input[type='number'] {
   background: #273549;
   border-radius: 6px;
   border: none;
 
-
   font-size: 16px;
   font-family: inherit;
-  width: 50%;
+  width: 70%;
   height: 32px;
   text-align: center;
   padding: 0 10px;
@@ -156,6 +165,6 @@ input[type='number'] {
   .alert__text {
     width: 170px;
     margin-inline: auto;
-    font-size:0.7rem;
+    font-size: 0.7rem;
   }
 }
