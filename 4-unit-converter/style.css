@@ -91,7 +91,7 @@ body {
 }
 .unit-container {
   max-width: 500px;
-  height: 90px;
+  padding:1rem 0.5rem;
   text-align: center;
   background: #273549;
   margin: 24px 25px;
@@ -115,11 +115,14 @@ body {
 }
 
 @media (max-width: 520px) {
-  .unit-container {
-    padding: 3rem 2rem;
+  .main-heading {
+    font-size:24px;
+    line-height: 1.3;
   }
+
   .unit-details {
     font-size: 18px;
+
   }
   .unit-result {
     font-size: 14px;
