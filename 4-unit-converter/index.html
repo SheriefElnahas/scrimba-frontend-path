@@ -5,27 +5,29 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="top-section">
-        <h1 class="main-heading">Metric/Imperial Unit Conversion</h1>
-        <input class="unit-input" type="number" value="20" />
-        <button class="convert-button">Convert</button>
+    <main>
+      <div class="container">
+        <div class="top-section">
+          <h1 class="main-heading">Metric/Imperial Unit Conversion</h1>
+          <input class="unit-input" type="number" value="20" />
+          <button class="convert-button">Convert</button>
+        </div>
+        <div class="bottom-section">
+          <div class="unit-container">
+            <p class="unit-details">Length (Meter/Feet)</p>
+            <p id="meters-feet" class="unit-result">20 meters = 65.616 feet | 20 feet = 6.096 meters</p>
+          </div>
+          <div class="unit-container">
+            <p class="unit-details">Volume (Liters/Gallons)</p>
+            <p id="liters-gallons" class="unit-result">20 liters = 5.284 gallons | 20 gallons = 75.708 liters</p>
+          </div>
+          <div class="unit-container">
+            <p class="unit-details">Mass (Kilograms/Pounds)</p>
+            <p id="kilos-pounds" class="unit-result">20 kilos = 44.092 pounds | 20 pounds = 9.072 kilos</p>
+          </div>
+        </div>
       </div>
-      <div class="bottom-section">
-        <div class="unit-container">
-          <p class="unit-details">Length (Meter/Feet)</p>
-          <p id="meters-feet" class="unit-result">20 meters = 65.616 feet | 20 feet = 6.096 meters </p>
-        </div>
-        <div class="unit-container">
-          <p class="unit-details">Volume (Liters/Gallons)</p>
-          <p id="liters-gallons" class="unit-result"> 20 liters = 5.284 gallons | 20 gallons = 75.708 liters </p>
-        </div>
-        <div class="unit-container">
-          <p class="unit-details">Mass (Kilograms/Pounds)          </p>
-          <p id="kilos-pounds" class="unit-result">20 kilos = 44.092 pounds | 20 pounds = 9.072 kilos          </p>
-        </div>
-      </div>
-    </div>
+    </main>
 
     <script src="script.js"></script>
   </body>
