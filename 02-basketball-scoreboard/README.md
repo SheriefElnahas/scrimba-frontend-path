@@ -4,7 +4,7 @@ Basketball Scoreboard is an application desgined to help players keep track of t
 
 ## Screenshot Of The Project
 
-![Basketball Scoreboard App Image](https://github.com/SheriefElnahas/scrimba-frontend-path/assets/47671429/7b7c7d61-9f96-48f5-8d60-f0f14e9d657f)
+![password-generator-app-image](https://github.com/SheriefElnahas/scrimba-frontend-path/assets/47671429/b50355c5-ffad-431f-a69a-e5ddb6c31d24)
 
 
 ## Website URL
