@@ -4,8 +4,7 @@ Generate strong passwords quickly and easily with our password generator applica
 
 ## Screenshot Of The Project
 
-![Basketball Scoreboard App Image](https://github.com/SheriefElnahas/scrimba-frontend-path/assets/47671429/7b7c7d61-9f96-48f5-8d60-f0f14e9d657f)
-
+![password-generator-app-image](https://github.com/SheriefElnahas/scrimba-frontend-path/assets/47671429/aa79413b-c652-47f4-a0d1-a34815c03bde)
 
 ## Website URL
 
