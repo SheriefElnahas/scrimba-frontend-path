@@ -7,23 +7,142 @@
 }
 
 body {
-  background: gray;
+  background: #dedede;
   font-family: 'Inter', sans-serif;
- 
+  color: #1b1924;
 }
 
-h1,h2,button {
+h1,
+h2,
+button {
   font-family: 'Josefin Sans', sans-serif;
 }
 
+input,
+textarea {
+  background: #444059;
+  color: #8f8f8f;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  border-radius: 8px;
+  font-weight: bold;
+}
+h1,
+h2 {
+  color: #fff;
+}
+
 button {
-  border:none;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s linear;
 }
 
 img {
   max-width: 100%;
-  display:block;
-  height:auto;
+  display: block;
+  height: auto;
+}
+
+.card {
+  background: #000;
+  width: 390px;
+  margin: 0.5rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card__logo {
+  width: 90px;
+  height: 90px;
+  margin-inline: auto;
+}
+.card__heading {
+  font-size: 25px;
+  margin: 17px 0 19px;
+}
+
+.card__form {
+  display: flex;
+  flex-direction: column;
+}
+.card__textarea {
+  padding: 1rem;
+}
+.card__textarea:focus, .card__input:focus  {
+  outline:2px solid hsl(201, 88%, 55%);
+}
+
+.card__inputs {
+  display: flex;
+
+  margin: 9px 0;
+}
+.card__input {
+  padding: 0.9rem 0.3rem;
+  width: 70%;
+
+  text-align: center;
+}
+.card__input:nth-child(1) {
+  margin-right: 10px;
+}
+
+.card__btn {
+  background: hsl(201, 88%, 55%);
+  color: #333;
+  padding: 1rem 0 0.8rem;
+  font-size: 20px;
+  font-weight: bold;
+}
+.card__btn:hover {
+  background: hsl(201, 88%, 65%);
+}
+.card__btn:focus {
+  outline:2px solid #fff;
+}
+
+.endorsements__heading {
+  font-size: 20px;
+  margin: 24px 0 19px;
+}
+
+.endorsement {
+  background: #fff;
+  margin-bottom: 13px;
+  text-align: left;
+  padding: 1rem;
+  color: #1b1924;
+}
+
+.endorsement__to,
+.endorsement__from {
+  font-size: 14px;
+  font-weight: 700;
+}
+.endorsement__text {
+  font-size: 14px;
+  margin: 13px 0 8.5px;
+}
+.endorsement__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.endorsement__likes {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.likes__icon {
+  color: black;
+}
+
+.btn__heart {
+  font-size:1.2rem;
+  background: transparent;
+
 }
