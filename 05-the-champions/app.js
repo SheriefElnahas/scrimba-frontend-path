@@ -7,6 +7,17 @@ const endorsementsElement = document.querySelector('.endorsements');
 
 const endorsementArray = [];
 
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js';
+import { getDatabase, ref, push, onValue, remove } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js';
+
+const appSettings = {
+  databaseURL: 'https://endorsements-132d8-default-rtdb.europe-west1.firebasedatabase.app/',
+};
+
+const app = initializeApp(appSettings);
+const database = getDatabase(app);
+const endorsementsInDB = ref(database, 'endorsements');
+
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 });
@@ -21,6 +32,9 @@ cardBtn.addEventListener('click', () => {
     from: fromValue,
     to: toValue,
   };
+
+  push(endorsementsInDB, newendorsement);
+
   endorsementArray.push(newendorsement);
 
   endorsementMessage.value = endorsementFrom.value = endorsementTo.value = '';
