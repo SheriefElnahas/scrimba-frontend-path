@@ -15,14 +15,13 @@ const endorsementForm = document.querySelector('form');
 const endorsementMessage = document.querySelector('.card__textarea');
 const endorsementFrom = document.querySelector('#from');
 const endorsementTo = document.querySelector('#to');
-const endorsementsContainerElement = document.querySelector('.endorsements');
+const endorsementsContainerElement = document.querySelector('.endorsements__container');
 const addEndoresmentBtn = document.querySelector('#add-endorestment-btn');
 
 endorsementForm.addEventListener('submit', (e) => {
   e.preventDefault();
 });
 
-// const endorsementArray = [];
 addEndoresmentBtn.addEventListener('click', () => {
   // Extract Endorsement Values
   const endorsementMessageValue = endorsementMessage.value;
@@ -40,17 +39,32 @@ addEndoresmentBtn.addEventListener('click', () => {
   push(endorsementsInDB, newendorsement);
   // Push a new endorsement to firebase
 
-  // endorsementArray.push(newendorsement);
-
   // Clear the inputs
   endorsementMessage.value = endorsementFrom.value = endorsementTo.value = '';
+});
+onValue(endorsementsInDB, function (snapshot) {
+  if (snapshot.exists()) {
+    // Clear Endoremsent HTML Element
+    endorsementsContainerElement.innerHTML = '';
 
-  // Create A New Endorsement and add it to the HTML
-  endorsementsContainerElement.innerHTML += createNewEndorsement(endorsementMessageValue, fromValue, toValue);
+    let itemsArray = Object.entries(snapshot.val());
+
+    for (let i = 0; i < itemsArray.length; i++) {
+      let currentItem = itemsArray[i];
+      // let currentItemID = currentItem[0];
+      let currentItemValue = currentItem[1];
+
+      console.log(currentItemValue);
+      // appendItemToShoppingListEl(currentItem)
+      createAndAppendNewEndorsement(currentItemValue.endorsementMessage, currentItemValue.from, currentItemValue.to);
+    }
+  } else {
+    endorsementsContainerElement.innerHTML = 'No items here... yet';
+  }
 });
 
-function createNewEndorsement(endorsementMessage, from, to) {
-  return `
+function createAndAppendNewEndorsement(endorsementMessage, from, to) {
+  const endorsementHTMLDiv = `
   <div class="endorsement">
     <h3 class="endorsement__to">To ${to}</h3>
     <p class="endorsement__text">${endorsementMessage}</p>
@@ -64,4 +78,5 @@ function createNewEndorsement(endorsementMessage, from, to) {
     </div>
   </div>
   `;
+  endorsementsContainerElement.innerHTML += endorsementHTMLDiv;
 }
