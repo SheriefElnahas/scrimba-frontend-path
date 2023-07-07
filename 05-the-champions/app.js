@@ -54,8 +54,6 @@ onValue(endorsementsInDB, function (snapshot) {
       // let currentItemID = currentItem[0];
       let currentItemValue = currentItem[1];
 
-      console.log(currentItemValue);
-      // appendItemToShoppingListEl(currentItem)
       createAndAppendNewEndorsement(currentItemValue.endorsementMessage, currentItemValue.from, currentItemValue.to);
     }
   } else {
@@ -80,3 +78,14 @@ function createAndAppendNewEndorsement(endorsementMessage, from, to) {
   `;
   endorsementsContainerElement.innerHTML += endorsementHTMLDiv;
 }
+
+endorsementsContainerElement.addEventListener('click', (e) => {
+  if (e.target.classList.contains('btn__heart')) {
+    // let likesCount = e.target.nextElementSibling.textContent += 1;
+    e.target.nextElementSibling.textContent =   Number(e.target.nextElementSibling.textContent) + 1;
+
+
+
+
+  }
+});
