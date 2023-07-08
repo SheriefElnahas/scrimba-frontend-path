@@ -21,7 +21,7 @@ button {
 input,
 textarea {
   background: #444059;
-  color: #B3B3B3;
+  color: #b3b3b3;
   border: none;
   font-family: 'Inter', sans-serif;
   border-radius: 8px;
@@ -70,8 +70,9 @@ img {
 .card__textarea {
   padding: 1rem;
 }
-.card__textarea:focus, .card__input:focus  {
-  outline:2px solid hsl(201, 88%, 55%);
+.card__textarea:focus,
+.card__input:focus {
+  outline: 2px solid hsl(201, 88%, 55%);
 }
 
 .card__inputs {
@@ -100,7 +101,7 @@ img {
   background: hsl(201, 88%, 65%);
 }
 .card__btn:focus {
-  outline:2px solid #fff;
+  outline: 2px solid #fff;
 }
 
 .endorsements__heading {
@@ -114,6 +115,15 @@ img {
   text-align: left;
   padding: 1rem;
   color: #1b1924;
+}
+.endorsement__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.endorsement__close {
+  background: none;
+  font-weight: bold;
 }
 
 .endorsement__to,
@@ -142,7 +152,6 @@ img {
 }
 
 .btn__heart {
-  font-size:1.2rem;
+  font-size: 1.2rem;
   background: transparent;
-
 }

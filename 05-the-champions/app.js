@@ -1,6 +1,6 @@
 // Firebase Imports
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js';
-import { getDatabase, ref, push, onValue } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js';
+import { getDatabase, ref, push, onValue, set, update, remove } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js';
 
 const appSettings = {
   databaseURL: 'https://endorsements-132d8-default-rtdb.europe-west1.firebasedatabase.app/',
@@ -42,6 +42,7 @@ addEndoresmentBtn.addEventListener('click', () => {
   // Clear the inputs
   endorsementMessage.value = endorsementFrom.value = endorsementTo.value = '';
 });
+
 onValue(endorsementsInDB, function (snapshot) {
   if (snapshot.exists()) {
     // Clear Endoremsent HTML Element
@@ -51,20 +52,30 @@ onValue(endorsementsInDB, function (snapshot) {
 
     for (let i = 0; i < itemsArray.length; i++) {
       let currentItem = itemsArray[i];
-      // let currentItemID = currentItem[0];
+      let currentItemID = currentItem[0];
       let currentItemValue = currentItem[1];
 
-      createAndAppendNewEndorsement(currentItemValue.endorsementMessage, currentItemValue.from, currentItemValue.to);
+      createAndAppendNewEndorsement(currentItemValue.endorsementMessage, currentItemValue.from, currentItemValue.to, currentItem);
+      // updateEndorsement(currentItemID);
     }
   } else {
     endorsementsContainerElement.innerHTML = 'No items here... yet';
   }
 });
 
-function createAndAppendNewEndorsement(endorsementMessage, from, to) {
-  const endorsementHTMLDiv = `
+function createAndAppendNewEndorsement(endorsementMessage, from, to, currentItem) {
+  console.log(currentItem);
+
+  let newEndorsementDiv = document.createElement('div');
+
+  newEndorsementDiv.innerHTML = `
   <div class="endorsement">
-    <h3 class="endorsement__to">To ${to}</h3>
+  <div class="endorsement__header">
+  <h3 class="endorsement__to">To ${to}</h3>
+   <button class="endorsement__close">X</button>
+  </div>
+
+
     <p class="endorsement__text">${endorsementMessage}</p>
     <div class="endorsement__footer">
       <h3 class="endorsement__from">From ${from}</h3>
@@ -76,16 +87,36 @@ function createAndAppendNewEndorsement(endorsementMessage, from, to) {
     </div>
   </div>
   `;
-  endorsementsContainerElement.innerHTML += endorsementHTMLDiv;
+
+  newEndorsementDiv.addEventListener('click', (e) => {
+    if (e.target.classList.contains('endorsement__close')) {
+      let itemRef = ref(database, `endorsements/${currentItem[0]}`);
+
+      // Challenge: Use the remove function to remove the item from the database
+      remove(itemRef);
+    }
+  });
+
+  endorsementsContainerElement.append(newEndorsementDiv);
 }
 
-endorsementsContainerElement.addEventListener('click', (e) => {
-  if (e.target.classList.contains('btn__heart')) {
-    // let likesCount = e.target.nextElementSibling.textContent += 1;
-    e.target.nextElementSibling.textContent =   Number(e.target.nextElementSibling.textContent) + 1;
+// endorsementsContainerElement.addEventListener('click', (e) => {
+//   if (e.target.classList.contains('btn__heart')) {
+//     e.target.nextElementSibling.textContent = Number(e.target.nextElementSibling.textContent) + 1;
+//   }
 
+//   if (e.target.classList.contains('endorsement__close')) {
+//     console.log('hello');
+//   }
+// });
 
+// function updateEndorsement(endorestmentId) {
+//   // Get a reference to the item you want to update
+//   let itemRef = firebase.database().ref('shoppingList/' + itemID);
 
+//   let endorestmentLocationInDB = ref(database, `endorsements/${endorestmentId}`);
 
-  }
-});
+//   endorestmentLocationInDB.update({
+//     endorsementMessage: 'NO Way',
+//   });
+// }
