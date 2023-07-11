@@ -33,11 +33,11 @@ addEndoresmentBtn.addEventListener('click', () => {
     endorsementMessage: endorsementMessageValue,
     from: fromValue,
     to: toValue,
+    likes: 0,
   };
 
   // Push this Endorsement object to firebase
   push(endorsementsInDB, newendorsement);
-  // Push a new endorsement to firebase
 
   // Clear the inputs
   endorsementMessage.value = endorsementFrom.value = endorsementTo.value = '';
@@ -55,17 +55,15 @@ onValue(endorsementsInDB, function (snapshot) {
       let currentItemID = currentItem[0];
       let currentItemValue = currentItem[1];
 
-      createAndAppendNewEndorsement(currentItemValue.endorsementMessage, currentItemValue.from, currentItemValue.to, currentItem);
-      // updateEndorsement(currentItemID);
+      const newEndorsementDiv = createEndorsementHTML(currentItemValue);
+      removeEndorsement(currentItemID, newEndorsementDiv);
+      updateEndorsement(currentItemID, newEndorsementDiv);
     }
   } else {
     endorsementsContainerElement.innerHTML = 'No items here... yet';
   }
 });
-
-function createAndAppendNewEndorsement(endorsementMessage, from, to, currentItem) {
-  console.log(currentItem);
-
+function createEndorsementHTML({ endorsementMessage, from, to, likes }) {
   let newEndorsementDiv = document.createElement('div');
 
   newEndorsementDiv.innerHTML = `
@@ -81,42 +79,35 @@ function createAndAppendNewEndorsement(endorsementMessage, from, to, currentItem
       <h3 class="endorsement__from">From ${from}</h3>
       <div class="endorsement__likes">
         <p class="likes__icon">
-          <button class="btn__heart">&hearts;</button> <span class="likes__like">0</span>
+          <button class="btn__heart">&hearts;</button> <span class="likes__like">${likes}</span>
         </p>
       </div>
     </div>
   </div>
   `;
+  endorsementsContainerElement.append(newEndorsementDiv);
 
-  newEndorsementDiv.addEventListener('click', (e) => {
+  return newEndorsementDiv;
+}
+
+function removeEndorsement(endorestmentId, currentEndorsementDiv) {
+  currentEndorsementDiv.addEventListener('click', (e) => {
     if (e.target.classList.contains('endorsement__close')) {
-      let itemRef = ref(database, `endorsements/${currentItem[0]}`);
+      let itemRef = ref(database, `endorsements/${endorestmentId}`);
 
-      // Challenge: Use the remove function to remove the item from the database
       remove(itemRef);
     }
   });
-
-  endorsementsContainerElement.append(newEndorsementDiv);
 }
+let likes = 0;
+function updateEndorsement(endorestmentId, currentEndorsementDiv) {
+  currentEndorsementDiv.addEventListener('click', (e) => {
+    if (e.target.classList.contains('btn__heart')) {
+      let itemRef = ref(database, `endorsements/${endorestmentId}`);
 
-// endorsementsContainerElement.addEventListener('click', (e) => {
-//   if (e.target.classList.contains('btn__heart')) {
-//     e.target.nextElementSibling.textContent = Number(e.target.nextElementSibling.textContent) + 1;
-//   }
-
-//   if (e.target.classList.contains('endorsement__close')) {
-//     console.log('hello');
-//   }
-// });
-
-// function updateEndorsement(endorestmentId) {
-//   // Get a reference to the item you want to update
-//   let itemRef = firebase.database().ref('shoppingList/' + itemID);
-
-//   let endorestmentLocationInDB = ref(database, `endorsements/${endorestmentId}`);
-
-//   endorestmentLocationInDB.update({
-//     endorsementMessage: 'NO Way',
-//   });
-// }
+      update(itemRef, {
+        likes: (likes += 1),
+      });
+    }
+  });
+}
