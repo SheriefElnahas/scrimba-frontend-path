@@ -7,7 +7,7 @@
 }
 
 body {
-  background: #dedede;
+  background: #77EDAE;
   font-family: 'Inter', sans-serif;
   color: #1b1924;
 }
@@ -51,6 +51,7 @@ img {
   margin: 3rem auto;
   padding: 2rem;
   text-align: center;
+  border-radius: 5px;
 }
 
 .card__logo {
@@ -69,6 +70,7 @@ img {
 }
 .card__textarea {
   padding: 1rem;
+  resize:none;
 }
 .card__textarea:focus,
 .card__input:focus {
