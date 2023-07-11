@@ -41,12 +41,10 @@ addEndoresmentBtn.addEventListener('click', () => {
 
   // Clear the inputs
   endorsementMessage.value = endorsementFrom.value = endorsementTo.value = '';
+  endorsementTo.blur();
 });
 
-
 onValue(endorsementsInDB, function (snapshot) {
-
-
   if (snapshot.exists()) {
     // Clear Endoremsent HTML Element
     endorsementsContainerElement.innerHTML = '';
