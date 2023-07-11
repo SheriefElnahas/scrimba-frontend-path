@@ -31,7 +31,8 @@ const posts = [
 const renderHTML = posts.map((post) => {
   return `<section class="profile">
   <div class="profile-details">
-    <img src="${post.avatar}" alt="profile picture" class="profile-img" />
+  <img src="${post.avatar}" alt="${post.name} profile image" class="profile-img" width="34" height="34" />
+
 
   <div class="profile-info">
     <p class="profile-name bold">${post.name}</p>
@@ -39,13 +40,13 @@ const renderHTML = posts.map((post) => {
   </div>
 </div>
 
-  <img src="${post.post}" alt="selfie img" class="profile-selfie" />
+  <img src="${post.post}" alt="${post.name} selfie img" class="profile-selfie" width="375" height="375" />
 
   <div class="profile-interactions">
     <div class="profile-icons">
-    <img id="like-icon" class="icon-img" src="images/icon-heart.png" alt="likes icon" />
-      <img class="icon-img" src="images/icon-comment.png" alt="comment icon" />
-      <img class="icon-img" src="images/icon-dm.png" alt="send icon" />
+    <img class="icon-img like-icon" src="images/icon-heart.png" alt="like this image" width="25" height="25" />
+      <img class="icon-img" src="images/icon-comment.png" alt="Leave a comment" width="25" height="25"  />
+      <img class="icon-img" src="images/icon-dm.png" alt="share this image" width="25" height="25"  />
 
 
     </div>
@@ -57,10 +58,8 @@ const renderHTML = posts.map((post) => {
 </section>`;
 });
 
-console.log(renderHTML.join(''));
-
 document.querySelector('.container').innerHTML += renderHTML.join('');
-const likeIcons = document.querySelectorAll('#like-icon');
+const likeIcons = document.querySelectorAll('.like-icon');
 const selfieImg = document.querySelectorAll('.profile-selfie');
 
 likeIcons.forEach((likeIcon) => {
