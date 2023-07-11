@@ -43,19 +43,26 @@ addEndoresmentBtn.addEventListener('click', () => {
   endorsementMessage.value = endorsementFrom.value = endorsementTo.value = '';
 });
 
+
 onValue(endorsementsInDB, function (snapshot) {
+
+
   if (snapshot.exists()) {
     // Clear Endoremsent HTML Element
     endorsementsContainerElement.innerHTML = '';
 
+    // Loop through existing entires in firebase
     let itemsArray = Object.entries(snapshot.val());
 
     for (let i = 0; i < itemsArray.length; i++) {
+      // Extract Each Object and the Id
       let currentItem = itemsArray[i];
       let currentItemID = currentItem[0];
       let currentItemValue = currentItem[1];
 
+      // Create a new endorsement div
       const newEndorsementDiv = createEndorsementHTML(currentItemValue);
+
       removeEndorsement(currentItemID, newEndorsementDiv);
       updateEndorsement(currentItemID, newEndorsementDiv);
     }
@@ -72,8 +79,6 @@ function createEndorsementHTML({ endorsementMessage, from, to, likes }) {
   <h3 class="endorsement__to">To ${to}</h3>
    <button class="endorsement__close">X</button>
   </div>
-
-
     <p class="endorsement__text">${endorsementMessage}</p>
     <div class="endorsement__footer">
       <h3 class="endorsement__from">From ${from}</h3>
@@ -94,7 +99,6 @@ function removeEndorsement(endorestmentId, currentEndorsementDiv) {
   currentEndorsementDiv.addEventListener('click', (e) => {
     if (e.target.classList.contains('endorsement__close')) {
       let itemRef = ref(database, `endorsements/${endorestmentId}`);
-
       remove(itemRef);
     }
   });

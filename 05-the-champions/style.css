@@ -116,6 +116,9 @@ img {
   padding: 1rem;
   color: #1b1924;
 }
+.endorsements__container {
+  color:#fff;
+}
 .endorsement__header {
   display: flex;
   align-items: center;
@@ -125,6 +128,7 @@ img {
   background: none;
   font-weight: bold;
 }
+
 
 .endorsement__to,
 .endorsement__from {
