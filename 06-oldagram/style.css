@@ -6,13 +6,13 @@
   box-sizing: border-box;
 }
 body {
-  background: rgb(244, 242, 242);
+  background: #03FEE1;
   font-family: "Source Sans Pro", sans-serif;
   color: #000;
 }
 .container {
   width: 375px;
-  margin: 5rem auto;
+  margin: 1rem auto;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -27,6 +27,7 @@ header {
   align-items: center;
   border-bottom: 1px solid #c6c6c6;
   padding: 12px 15px;
+
 }
 
 .logo {
@@ -49,6 +50,7 @@ section:not(:first-of-type) {
 .profile-info {
   display: flex;
   flex-direction: column;
+
 }
 .profile-selfie {
   cursor: pointer;
