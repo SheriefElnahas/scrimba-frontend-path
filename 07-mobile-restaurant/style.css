@@ -99,6 +99,15 @@ main {
   font-size: 32px;
   margin-bottom: 40px;
 }
+.alert__message {
+  background:#ECFDF5;
+  color:#065F46;
+  padding:2.5rem;
+  text-align: center;
+  font-size:22px;
+  letter-spacing: 1px;
+  display:none;
+}
 
 .order__item {
   display: flex;
