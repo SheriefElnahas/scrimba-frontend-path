@@ -53,6 +53,9 @@ function calculateTotalPrice() {
 // Remove An Order
 ordedrContainer.addEventListener('click', (e) => {
   if (e.target.classList.contains('btn__remove')) {
+    if (e.target.parentElement.parentElement.children.length === 1) {
+      orderSection.style.display = 'none';
+    }
     e.target.parentElement.remove();
     calculateTotalPrice();
   }
