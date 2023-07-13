@@ -3,8 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="pizza ordering application that allows users to select items from a menu, add them to their order, and view their total price. The application also includes a modal for users to enter their payment details before completing their order." />
+    <meta name="description" content="Mobile Restaurant Menu is an ordering application that allows users to select items from a menu, add them to their order, and view their total price. The application also includes a modal for users to enter their payment details before completing their order." />
+
     <title>Mobile Restaurant Menu</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -15,7 +26,7 @@
 
           <form class="dialog__form">
             <div class="form__field">
-              <input id="username" type="text" class="form__input" placeholder="Enter your name" required  />
+              <input id="username" type="text" class="form__input" placeholder="Enter your name" required />
             </div>
             <div class="form__field">
               <input id="card-number" type="text" class="form__input" placeholder="Enter card number" required />
@@ -62,10 +73,8 @@
         <div class="container">
           <p class="alert__message">Thanks, Name!Your order is on its way!</p>
         </div>
-
       </section>
       <section class="order">
-
         <h3 class="order__heading">Your order</h3>
         <div class="container container--order">
           <!-- <div class="order__item">
