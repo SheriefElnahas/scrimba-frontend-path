@@ -8,6 +8,25 @@
   </head>
   <body>
     <main>
+      <div class="modal__container">
+        <dialog class="dialog">
+          <p class="dialog__heading">Enter card details</p>
+
+          <form class="dialog__form">
+            <div class="form__field">
+              <input type="text" class="form__input" placeholder="Enter your name" />
+            </div>
+            <div class="form__field">
+              <input type="text" class="form__input" placeholder="Enter card number" />
+            </div>
+            <div class="form__field">
+              <input type="number" class="form__input" placeholder="Enter CVV" />
+            </div>
+            <button id="close-modal" class="btn__green">Pay</button>
+          </form>
+        </dialog>
+      </div>
+
       <header class="header"></header>
       <section class="menu">
         <div class="container">
@@ -54,15 +73,14 @@
             <p class="order__price">$8</p>
           </div>
         </div>
-        <div class="container ">
+        <div class="container">
           <div class="total__price">
             <p class="order__name">Total price:</p>
             <p class="order__price">$22</p>
           </div>
           <div class="button__container">
-            <button class="btn__complete">Complete Order</button>
+            <button id="open-modal" class="btn__green btn--complete">Complete Order</button>
           </div>
-
         </div>
       </section>
     </main>
