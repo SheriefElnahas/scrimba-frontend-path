@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Smythe&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Smythe&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -14,11 +13,77 @@ body {
 
 input,
 button {
-  font-family: 'Smythe', cursive;
+  font-family: 'Inter', sans-serif;
 }
 
 img {
-  display:block;
-  max-width:100%;
-  height:auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  width: 600px;
+  margin: 2rem auto;
+  background: #fff;
+}
+
+/* Header */
+.header {
+  background: url('./images/header.png');
+  height: 167px;
+  object-fit: cover;
+}
+
+/* Menu Section */
+.menu {
+  padding: 10px 46px 51px;
+}
+.menu__item {
+  display: flex;
+  align-items: center;
+  border-bottom:1px solid #D2D2D2;
+  padding-bottom:50px;
+  padding-top:46px;
+}
+.item__img {
+  margin-right: 20px;
+  width:80px;
+  height:80px;
+  object-fit:fill;
+
+}
+
+.item__heading {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.item__description {
+  color: #8b8b8b;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.item__price {
+  font-size: 20px;
+}
+
+.item__button {
+  margin-left: auto;
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  border: 1px solid #dedede;
+  border-radius: 50%;
+  padding: 0.6rem 1rem;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+.item__button:hover {
+  background:#000;
+  color:#fff;
+
 }
