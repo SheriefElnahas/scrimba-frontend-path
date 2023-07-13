@@ -53,8 +53,8 @@ main {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #d2d2d2;
-  padding-bottom: 50px;
-  padding-top: 46px;
+  padding-bottom: 49px;
+  padding-top: 41px;
 }
 .item__img {
   margin-right: 20px;
@@ -102,7 +102,7 @@ main {
   text-align: center;
   font-size: 32px;
   margin-bottom: 40px;
-  margin-top:30px;
+  margin-top: 30px;
 }
 .alert__message {
   background: #ecfdf5;
@@ -112,6 +112,10 @@ main {
   font-size: 22px;
   letter-spacing: 1px;
   display: none;
+  border-bottom: 1px solid #d2d2d2;
+  border-right: 1px solid #d2d2d2;
+  border-left: 1px solid #d2d2d2;
+  margin-bottom: 0.2rem;
 }
 
 .order__item {
@@ -176,9 +180,11 @@ main {
 
 /* Dialog */
 .dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 450px;
-  top: 25%;
-  left: 23%;
   padding: 47px 24px 30px;
 }
 

@@ -1,24 +1,16 @@
-const modalElement = document.querySelector('dialog');
-const openModalButton = document.querySelector('#open-modal');
-const closeModalButton = document.querySelector('#close-modal');
-
-openModalButton.addEventListener('click', () => {
-  modalElement.showModal();
-});
-
-closeModalButton.addEventListener('click', () => {
-  modalElement.close();
-});
-
 // Add Menu Item
 const addButtons = document.querySelectorAll('.item__button');
 const orderSection = document.querySelector('.order');
+const alertMessage = document.querySelector('.alert__message');
 
 addButtons.forEach((addButton) => {
   addButton.addEventListener('click', (e) => {
     // Extract Order Name & Price
     const selectedItemName = e.target.previousElementSibling.children[0].textContent;
     const selectedItemPrice = e.target.previousElementSibling.children[2].textContent.slice(1);
+
+    // Hide Alert Message If It Already Exists
+    alertMessage.style.display = 'none';
 
     // Create An Order From The Selected Order Values
     createOrderItem(selectedItemName, selectedItemPrice);
@@ -72,3 +64,42 @@ function calculateTotalPrice() {
 
   totalPriceElement.textContent = `$${total}`;
 }
+
+// Modal Logic
+const modalElement = document.querySelector('dialog');
+const openModalButton = document.querySelector('#open-modal');
+const closeModalButton = document.querySelector('#close-modal');
+const dialogForm = document.querySelector('.dialog__form');
+const userName = document.querySelector('#username');
+const cardNumber = document.querySelector('#card-number');
+const cardCvv = document.querySelector('#card-cvv');
+
+openModalButton.addEventListener('click', () => {
+  modalElement.showModal();
+});
+
+closeModalButton.addEventListener('click', () => {
+  const hasEmptyFields = !userName.value.length || !cardNumber.value.length || !cardCvv.value.length;
+
+  // Only Close The Modal If The Field Are Not Empty
+  if (!hasEmptyFields) {
+    modalElement.close();
+
+    // Hide Order Section After We Complete The Payement
+    orderSection.style.display = 'none';
+
+    // Clear The Last Order Items
+    ordedrContainer.innerHTML = '';
+
+    // Empty Out Fields Values
+    userName.value = cardNumber.value = cardCvv.value = '';
+
+    // Build & Show Alert Message
+    alertMessage.textContent = `Thanks, ${userName.value}!Your order is on its way!`;
+    alertMessage.style.display = 'block';
+  }
+});
+
+dialogForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+});

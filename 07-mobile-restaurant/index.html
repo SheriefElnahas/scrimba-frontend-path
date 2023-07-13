@@ -15,15 +15,15 @@
 
           <form class="dialog__form">
             <div class="form__field">
-              <input type="text" class="form__input" placeholder="Enter your name" />
+              <input id="username" type="text" class="form__input" placeholder="Enter your name" required  />
             </div>
             <div class="form__field">
-              <input type="text" class="form__input" placeholder="Enter card number" />
+              <input id="card-number" type="text" class="form__input" placeholder="Enter card number" required />
             </div>
             <div class="form__field">
-              <input type="number" class="form__input" placeholder="Enter CVV" />
+              <input id="card-cvv" type="number" class="form__input" placeholder="Enter CVV" required />
             </div>
-            <button id="close-modal" class="btn__green">Pay</button>
+            <button type="button" id="close-modal" class="btn__green">Pay</button>
           </form>
         </dialog>
       </div>
@@ -59,12 +59,15 @@
             <button class="item__button">+</button>
           </div>
         </div>
+        <div class="container">
+          <p class="alert__message">Thanks, Name!Your order is on its way!</p>
+        </div>
+
       </section>
       <section class="order">
-     
-          <p class="alert__message">Thanks, Name!Your order is on its way!</p>
-          <h3 class="order__heading">Your order</h3>
-          <div class="container container--order">
+
+        <h3 class="order__heading">Your order</h3>
+        <div class="container container--order">
           <!-- <div class="order__item">
             <p class="order__name">Pizza</p>
             <button class="btn__remove">remove</button>
