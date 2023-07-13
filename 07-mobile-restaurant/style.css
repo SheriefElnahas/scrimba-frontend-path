@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Smythe&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #000;
+  font-family: 'Smythe', cursive;
+}
+
+input,
+button {
+  font-family: 'Smythe', cursive;
+}
+
+img {
+  display:block;
+  max-width:100%;
+  height:auto;
+}
