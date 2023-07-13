@@ -96,7 +96,7 @@ main {
 
 /* Order Section */
 .order {
-  display:none;
+  display: none;
 }
 .order__heading {
   text-align: center;
@@ -104,13 +104,13 @@ main {
   margin-bottom: 40px;
 }
 .alert__message {
-  background:#ECFDF5;
-  color:#065F46;
-  padding:2.5rem;
+  background: #ecfdf5;
+  color: #065f46;
+  padding: 2.5rem;
   text-align: center;
-  font-size:22px;
+  font-size: 22px;
   letter-spacing: 1px;
-  display:none;
+  display: none;
 }
 
 .order__item {
@@ -121,25 +121,27 @@ main {
 .order__item:last-child {
   margin-bottom: 20px;
 }
-.order__name, .total__name {
+.order__name,
+.total__name {
   font-size: 28px;
   margin-right: 30px;
   margin-top: -6px;
   width: 100px;
 }
 
-.order__button {
+.btn__remove {
   background: hsl(0, 52%, 57%);
   padding: 0.3rem;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 0.7rem;
 }
-.order__button:hover {
+.btn__remove:hover {
   background: hsl(0, 52%, 67%);
   color: black;
 }
-.order__price, .total__price {
+.order__price,
+.total__price {
   margin-left: auto;
   font-size: 20px;
   letter-spacing: 1px;
@@ -149,7 +151,6 @@ main {
   display: flex;
   border-top: 2px solid #393333;
   padding-top: 14px;
-
 }
 
 .button__container {

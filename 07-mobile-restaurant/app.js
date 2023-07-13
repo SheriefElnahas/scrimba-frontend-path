@@ -33,7 +33,7 @@ addButtons.forEach((addButton) => {
 function createOrderItem(orderName, orderPrice) {
   const orderDiv = `<div class="order__item">
              <p class="order__name">${orderName}</p>
-             <button class="order__button">remove</button>
+             <button class="btn__remove">remove</button>
              <p class="order__price">$${orderPrice}</p>
            </div>`;
   ordedrContainer.innerHTML += orderDiv;
@@ -49,3 +49,11 @@ function calculateTotalPrice() {
 
   totalPriceElement.textContent = `$${total}`;
 }
+
+// Remove An Order
+ordedrContainer.addEventListener('click', (e) => {
+  if (e.target.classList.contains('btn__remove')) {
+    e.target.parentElement.remove();
+    calculateTotalPrice();
+  }
+});
