@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Ubuntu:wght@400;700&display=swap');
+
 /*  Fonts
 -----
 font-family: 'Lora', serif;
@@ -9,7 +11,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 1.6rem;
 
   width: 557px;
@@ -39,12 +41,12 @@ Layout
 
 h1 {
   color: #143774;
-  font-family: "Lora", serif;
+  font-family: 'Lora', serif;
   margin-bottom: 0;
 }
 
 .subtitle {
-  color: #1792d2;
+  color: #1471a1;
   margin-top: 0.4rem;
   text-transform: uppercase;
   font-weight: bold;
@@ -78,7 +80,6 @@ nav a {
 }
 .active {
   border-bottom: 3px solid #717171;
-
 }
 
 /* Article Feature */
@@ -135,7 +136,7 @@ nav a {
 }
 .article-read-more {
   order: 5;
-  color: #1792d2;
+  color: #137bb1;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -209,7 +210,7 @@ nav a {
 }
 .widget-recent-post-title {
   order: 1;
-  font-family: "Lora", serif;
+  font-family: 'Lora', serif;
   color: #143774;
   font-size: 1.8rem;
 }
@@ -232,4 +233,3 @@ footer p {
 
   margin: 0.7rem;
 }
-
