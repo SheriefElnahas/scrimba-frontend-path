@@ -14,8 +14,8 @@ body {
   font-family: 'Ubuntu', sans-serif;
   font-size: 1.6rem;
 
-  width: 557px;
-  margin: 5rem auto;
+
+  margin: 0 auto;
   box-shadow: 0 20px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -25,6 +25,7 @@ img {
 }
 a {
   text-decoration: none;
+  transition: all 0.2s linear;
 }
 
 /* =================
@@ -43,15 +44,17 @@ h1 {
   color: #143774;
   font-family: 'Lora', serif;
   margin-bottom: 0;
+
 }
 
 .subtitle {
   color: #1471a1;
-  margin-top: 0.4rem;
+  margin-top: 0.6rem;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 2.4px;
   font-size: 12px;
+
 }
 
 /* Nav */
@@ -78,6 +81,10 @@ nav a {
   padding: 0.4rem;
   letter-spacing: 2px;
 }
+nav a:hover {
+  color: #143774;
+  border-bottom: 3px solid #143774;
+}
 .active {
   border-bottom: 3px solid #717171;
 }
@@ -86,7 +93,7 @@ nav a {
 .article-featured {
   display: flex;
   flex-direction: column;
-  padding: 5.8rem 2rem 0;
+  padding: 0 2rem;
   margin-bottom: 4.1rem;
   align-items: flex-start;
 }
@@ -129,19 +136,32 @@ nav a {
   color: #707070;
   font-weight: normal;
   line-height: 2.8rem;
+
 }
 
 .highlight {
   font-weight: bold;
 }
+
+
 .article-read-more {
   order: 5;
-  color: #137bb1;
+  color: hsl(201, 81%, 38%);
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 1.4rem;
   margin: 1rem 0 2rem;
+  padding-bottom:0.5rem;
+  border-bottom: 2px solid transparent;
+  width:180px;
+}
+.article-read-more-first {
+  width:35%;
+}  
+.article-read-more:hover {
+  color: hsl(201, 81%, 48%);
+  border-bottom:2px solid hsl(201, 81%, 48%);
 }
 
 /* Article Recent */
