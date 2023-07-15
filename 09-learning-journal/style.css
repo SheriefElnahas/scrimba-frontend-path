@@ -15,18 +15,80 @@ html {
   font-size: 62.5%;
 }
 body {
-  background: cyan;
+  background: black;
   line-height: 1.5;
   font-family: 'Source Sans 3', sans-serif;
 }
 
 button {
   font-family: inhert;
+}
+
+a {
+  text-decoration: none;
+}
+button,
+a {
   cursor: pointer;
-  transition: all 0.2s linear;
+  transition: color 0.2s ease-in;
 }
 img {
   display: block;
   height: auto;
   max-width: 100%;
+}
+ul {
+  list-style: none;
+}
+/* Reusable Classes */
+.container {
+  padding: 0 2em;
+}
+/* Header */
+.header {
+  height: 60px;
+  background: #fff;
+  padding: 1em;
+}
+.header--container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  margin-right: 0.5rem;
+}
+.header__title {
+  color: var(--dark-black);
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-top: 4px;
+}
+.nav__list {
+  display: flex;
+}
+.nav__link {
+  display: inline-block;
+  margin-left: 4rem;
+  font-size: 1.4rem;
+  color: var(--dark-black);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 6px;
+  border-bottom: 3px solid transparent;
+}
+.nav__link:hover {
+  color: #8334c1;
+}
+
+/* Media Queries */
+@media (min-width: 900px) {
+  .container {
+    padding: 0 5.3em;
+  }
 }
