@@ -1,0 +1,49 @@
+img {
+    width:100%;
+    display:block;
+    height:290px;
+    object-fit: fill;
+    border-radius: 5px;
+}
+
+.info {
+    text-align: center;
+    padding-bottom:0.1rem;
+}
+
+.info-name {
+    color:#fff;
+    font-size:25px;
+    font-weight: 700;
+    margin:21px 0 6px 0;
+
+}
+
+.info-titan {
+    color:#F3BF99;
+    font-size:13px;
+    margin:0;
+}
+
+.info-website {
+    color:#f5f5f5;
+    font-size:11px;
+    margin:8px 0 25px 0;
+}
+
+.info-btn {
+    background:#fff;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    padding: 9px 13px 9px 11px;
+    width:70%;
+    font-size:14px;
+    font-weight: bold;
+    margin-left:5px;
+    cursor: pointer;
+    margin:0.8rem;
+}
+
+.icon {
+    margin-right:8px;
+}

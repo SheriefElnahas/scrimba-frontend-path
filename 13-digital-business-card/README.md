@@ -1,8 +1,30 @@
-# React + Vite
+# React Digital Buisness Card
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Make a personal marketing card for your brand.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+## Documentation
+
+This project was aimed to use practice these skills
+- Component Nesting
+- Making Component Reusable
+
+
+
+
+
+## Feedback
+
+If you have any feedback, please reach out to me at sheriefelnahas5@gmail.com
+
+
+## 🛠 Technologies used
+HTML , CSS , Javascript , React
+
+
+## Authors
+
+- [@sheriefelnahas](https://github.com/SheriefElnahas)
+
